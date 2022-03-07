@@ -10,8 +10,10 @@ public class NameManager : MonoBehaviour
     
     public InputField playersNameInputField;
 
-    public string plyrName;
-    
+    string _plyrName;
+
+    public string PlyrName { get => _plyrName; set => _plyrName = value; }
+
     private void Awake()
     {
         if (Instance != null)
@@ -26,6 +28,6 @@ public class NameManager : MonoBehaviour
 
     public void SetPlayerName()
     {
-        plyrName = playersNameInputField.text;
+        PlyrName = playersNameInputField.text;
     }
 }
